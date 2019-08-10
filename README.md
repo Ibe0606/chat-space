@@ -5,7 +5,7 @@
 | name | string | null: false, index: true |
 ### Association
 - has_many : messages
-- has_many : groups
+- has_many : groups, through: :members
 
 ## messagesテーブル
 | Column | Type | Options |
@@ -13,10 +13,17 @@
 | body | text |  |
 | image | string |  |
 | group_id | integer | null: false,  foreign_key: true |
-| use_id | integer | null: false,  foreign_key: true |
+| user_id | integer | null: false,  foreign_key: true |
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## membersテーブル
+| Column | Type | Options |
+|-----------|------------|------------|
+| group_id | integer | null: false,  foreign_key: true |
+### Association
+- belongs_to :group
 
 ## groupsテーブル
 | Column | Type | Options |
