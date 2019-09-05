@@ -1,0 +1,49 @@
+
+.flash-box
+  .notice
+    グループを作成しました
+.wrapper
+  .chat-side.clearfix
+    .side-header
+      .side-header__box.clearfix
+        .side-header__box__user-name
+          Name
+        .side-header__box__menu
+          .side-header__box__menu__new-group.clearfix
+            %i.fa.fa-edit
+          .side-header__box__menu__edit-user
+            %i.fa.fa-cog
+    .groups
+      .group
+        .group__group-name
+          タイトル
+        .group__latest-message
+          コメント
+  .chat-main
+    .main-header
+      .main-header__left-box.clearfix
+        .main-header__left-box__current-group
+          タイトル
+        .main-header__left-box__member-list
+          Member: Name
+      =link_to "", class: "" do    
+        .main-header__edit-btn
+          Edit
+    .a
+    .messages
+      .message
+        .message__upper-info
+          .message__upper-info__talker.clearfix
+            Name
+          .message__upper-info__date
+            2019/08/27(Tue) 21:44:55
+        .message__text
+          コメント
+    .form
+      .new_message
+        .input-box
+          .text
+            type a message
+            %i.fa.fa-image
+        %input.submit-btn{value: "Send", type: "submit"}
+
